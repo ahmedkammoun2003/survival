@@ -5,6 +5,8 @@ import DrawingControl from "./control/Draw";
 
 const ZonesComponent = ({ mode, setMode }) => {
   const [zones, setZones] = useState([]);
+  console.log(zones);
+  console.log(mode);
 
   useEffect(() => {
     fetchZones();
@@ -43,7 +45,6 @@ const ZonesComponent = ({ mode, setMode }) => {
   };
 
   const handleZoneCreated = (e) => {
-    console.log(e.editing.latlngs[0]);
     const  layer  = e.editing.latlngs[0];
     const newZone = {
       type: mode,

@@ -24,7 +24,6 @@ const DrawingControl = ({ onCreated }) => {
 
     map.on(L.Draw.Event.CREATED, (event) => {
       const layer = event.layer;
-      drawnItems.addLayer(layer);
       onCreated(layer);
     });
 

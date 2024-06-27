@@ -11,6 +11,7 @@ router.get('/', async (req, res) => {
   }
 });
 router.post('/', async (req, res) => {
+  console.log('dythdhgfdhg');
   const { type, coordinates } = req.body;
 
   if (!type || !coordinates) {
